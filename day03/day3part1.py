@@ -12,7 +12,6 @@ def main():
 
 
   bitlen = len(bits[0])
-  sums = np.zeros(bitlen)
   sums = np.sum(bits, axis=0)
   print(f'{sums=}')
 
