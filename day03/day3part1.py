@@ -13,10 +13,7 @@ def main():
 
   bitlen = len(bits[0])
   sums = np.zeros(bitlen)
-  
-  for i in range(0,len(bits)):
-    sums += bits[i]
-
+  sums = np.sum(bits, axis=0)
   print(f'{sums=}')
 
   denominator = len(bits)
