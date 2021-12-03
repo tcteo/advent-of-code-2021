@@ -10,8 +10,6 @@ def main():
   ]
   print(bits)
 
-
-  bitlen = len(bits[0])
   sums = np.sum(bits, axis=0)
   print(f'{sums=}')
 
