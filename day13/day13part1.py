@@ -23,7 +23,7 @@ def main():
 
     # treat as a vertical fold   
     grid_left = grid[0:fold_along, :]
-    grid_right = grid[fold_along:, :]
+    grid_right = grid[fold_along+1:, :]
     grid_right = np.flip(grid_right, axis=0)
     pad_to = max(grid_left.shape[0], grid_right.shape[0])
     pad_left = np.zeros((pad_to - grid_left.shape[0], grid_left.shape[1]), dtype=np.bool)
@@ -36,7 +36,7 @@ def main():
 
     if needs_transpose:
       grid = np.transpose(grid)
-    break # stop at 1
+    # break # stop at 1
 
   print(show_grid(grid))
 
